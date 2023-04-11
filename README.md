@@ -98,7 +98,7 @@ Updates an instance based on the class name and id:
 quit or EOF
 
 ## Help
-help or help <command> Ex: 
+- help or help <command> Ex: 
 
 	(hbnb) help or help quit
 	 Defines quit option
