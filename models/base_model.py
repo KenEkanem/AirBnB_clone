@@ -16,13 +16,13 @@ class BaseModel:
             *args: as many arguments.
             **kwargs: key/pair value arguments.
         """
-        tformat = "%Y-%m-%dT%H:%M:%S.%f"
+        tformat = "%Y-%m-%dT%H:%M:%S.%f%z"
         if kwargs:
             for k, v in kwargs.items():
                 if k == "__class__":
                     continue
                 elif k == "created_at" or k == "updated_at":
-                    time = datetime.strptime(v, tformat)
+                    time =datetime.strptime(v, tformat)
                     setattr(self, k, time)
                 else:
                     setattr(self, k, v)
